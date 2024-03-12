@@ -11,7 +11,7 @@ public interface CartService {
     public List<Cart> getAllCarts();
     public List<Cart> getInDateRange(LocalDate start, LocalDate end);
     public List<Cart> getUserCart(int userId);
-    public Cart createCart(int userId, LocalDate date, List<Product> products);
+    public Cart createCart(Cart cart);
 
     public Cart updateCart(int id, int userId, LocalDate date, List<Product> products);
     public Cart deleteCart(int id);

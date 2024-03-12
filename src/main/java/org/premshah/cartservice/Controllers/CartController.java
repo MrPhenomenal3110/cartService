@@ -1,10 +1,9 @@
 package org.premshah.cartservice.Controllers;
 
 import org.premshah.cartservice.Models.Cart;
+import org.premshah.cartservice.Models.Product;
 import org.premshah.cartservice.Services.FakeStoreCartService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -32,6 +31,16 @@ public class CartController {
         LocalDate startDate = LocalDate.parse(start);
         LocalDate endDate = LocalDate.parse(end);
         return cartService.getInDateRange(startDate, endDate);
+    }
+
+    @GetMapping("/carts/user/{userId}")
+    public List<Cart> getUserCart(@PathVariable("userId") int userId) {
+        return cartService.getUserCart(userId);
+    }
+
+    @PostMapping("/carts")
+    public Cart createCart(@RequestBody Cart cart) {
+        return cartService.createCart(cart);
     }
 
 }
