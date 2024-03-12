@@ -1,7 +1,6 @@
 package org.premshah.cartservice.Services;
 
 import org.premshah.cartservice.Models.Cart;
-import org.premshah.cartservice.Models.Product;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
