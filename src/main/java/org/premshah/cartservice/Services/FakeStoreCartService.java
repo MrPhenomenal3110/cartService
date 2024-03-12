@@ -105,12 +105,24 @@ public class FakeStoreCartService implements CartService {
     }
 
     @Override
-    public Cart updateCart(int id, int userId, LocalDate date, List<Product> products) {
-        return null;
+    public Cart updateCart(int id, Cart cart) {
+        String url = "https://fakestoreapi.com/carts/" + id;
+        cart.setId(id);
+        restTemplate.put(
+                url,
+                cart
+        );
+        return cart;
     }
 
     @Override
     public Cart deleteCart(int id) {
-        return null;
+        String url = "https://fakestoreapi.com/carts/" + id;
+
+        Cart cart = getSingleCart(id);
+
+        restTemplate.delete(url);
+
+        return cart;
     }
 }

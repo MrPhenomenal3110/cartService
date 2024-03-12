@@ -43,4 +43,14 @@ public class CartController {
         return cartService.createCart(cart);
     }
 
+    @PutMapping("/carts/{id}")
+    public Cart updateCart(@PathVariable("id") int id, @RequestBody Cart cart) {
+        return cartService.updateCart(id, cart);
+    }
+
+    @DeleteMapping("/carts/{id}")
+    public Cart deleteCart(@PathVariable("id") int id) {
+        return cartService.deleteCart(id);
+    }
+
 }

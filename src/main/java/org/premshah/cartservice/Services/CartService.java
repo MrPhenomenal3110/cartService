@@ -13,7 +13,7 @@ public interface CartService {
     public List<Cart> getUserCart(int userId);
     public Cart createCart(Cart cart);
 
-    public Cart updateCart(int id, int userId, LocalDate date, List<Product> products);
+    public Cart updateCart(int id, Cart cart);
     public Cart deleteCart(int id);
 
 }
