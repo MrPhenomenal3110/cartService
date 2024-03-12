@@ -35,7 +35,7 @@ To run this project, you will need to have Java installed on your machine. You c
 
 You will also need to have IntelliJ Idea Ultimate installed on your device.
 
-To run this project locally, clone this repository, open it in IntelliJ Idea Ultimate, and run the `CartServicesApplication` class.
+To run this project locally, clone this repository, open it in IntelliJ Idea Ultimate, and run the `CartServicesApplication` class ( [path](/src/main/java/org/premshah/cartservice/CartServiceApplication.java) ).
 
 Now you can run the project using the run icon and navigate to the [localhost:8080](http://localhost:8080) (The default port is `8080`) to see the project running.
 
@@ -44,7 +44,7 @@ Now you can run the project using the run icon and navigate to the [localhost:80
 ## Usage
 
 This project is a simple cart service that uses the [FakeStoreAPI](https://fakestoreapi.com/) to get carts, update the carts and delete the carts. The creation, updation and deletion of the carts does not actually take place, but we get a response from the [FakeStoreAPI](https://fakestoreapi.com/) as if it did.
-For more information on the updation and deletion of the carts, please refer to the [FakeStoreAPI documentation]("https://fakestoreapi.com/docs") section.
+For more information on the updation and deletion of the carts, please refer to the [FakeStoreAPI documentation](https://fakestoreapi.com/docs).
 
 ---
 
