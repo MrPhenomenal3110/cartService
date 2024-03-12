@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 public class CartController {
     private FakeStoreCartService cartService;
@@ -17,6 +19,11 @@ public class CartController {
     @GetMapping("/carts/{id}")
     public Cart getSingleCart(@PathVariable("id") int id) {
         return cartService.getSingleCart(id);
+    }
+
+    @GetMapping("/carts")
+    public List<Cart> getAllCarts() {
+        return cartService.getAllCarts();
     }
 
 }

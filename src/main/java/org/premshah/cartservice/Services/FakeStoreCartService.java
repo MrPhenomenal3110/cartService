@@ -2,9 +2,13 @@ package org.premshah.cartservice.Services;
 
 import org.premshah.cartservice.Models.Cart;
 import org.premshah.cartservice.Models.Product;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -30,7 +34,22 @@ public class FakeStoreCartService implements CartService {
 
     @Override
     public List<Cart> getAllCarts() {
-        return null;
+        ParameterizedTypeReference<List<Cart>> responseType = new ParameterizedTypeReference<>(){};
+
+        String url = "https://fakestoreapi.com/carts";
+
+        ResponseEntity<List<Cart>> responseEntity = restTemplate.exchange(
+                url,
+                HttpMethod.GET,
+                null,
+                responseType
+        );
+
+        List<Cart> carts = responseEntity.getBody();
+        if(carts == null){
+            return new ArrayList<>();
+        }
+        return carts;
     }
 
     @Override
