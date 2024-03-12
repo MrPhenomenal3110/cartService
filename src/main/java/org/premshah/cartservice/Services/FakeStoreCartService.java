@@ -8,8 +8,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Service
@@ -53,8 +53,27 @@ public class FakeStoreCartService implements CartService {
     }
 
     @Override
-    public List<Cart> getInDateRange(Date start, Date end) {
-        return null;
+    public List<Cart> getInDateRange(LocalDate start, LocalDate end) {
+        String startDate = start.toString();
+        String endDate = end.toString();
+
+        String url = "https://fakestoreapi.com/carts?startdate=" + startDate + "&enddate=" + endDate;
+
+        ParameterizedTypeReference<List<Cart>> responseType = new ParameterizedTypeReference<>(){};
+
+        ResponseEntity<List<Cart>> responseEntity = restTemplate.exchange(
+                url,
+                HttpMethod.GET,
+                null,
+                responseType
+        );
+
+        List<Cart> carts = responseEntity.getBody();
+
+        if(carts == null){
+            return new ArrayList<>();
+        }
+        return carts;
     }
 
     @Override
@@ -63,12 +82,12 @@ public class FakeStoreCartService implements CartService {
     }
 
     @Override
-    public Cart createCart(int userId, Date date, List<Product> products) {
+    public Cart createCart(int userId, LocalDate date, List<Product> products) {
         return null;
     }
 
     @Override
-    public Cart updateCart(int id, int userId, Date date, List<Product> products) {
+    public Cart updateCart(int id, int userId, LocalDate date, List<Product> products) {
         return null;
     }
 

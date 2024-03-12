@@ -3,8 +3,7 @@ package org.premshah.cartservice.Models;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 @Getter
@@ -12,6 +11,6 @@ import java.util.List;
 public class Cart {
     int id;
     int userId;
-    Date date;
+    LocalDate date;
     List<Product> products;
 }
