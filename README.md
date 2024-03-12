@@ -54,20 +54,32 @@ The following are the endpoints that are available in this project:
 
 - `GET /carts` - This endpoint returns all the carts from the [FakeStoreAPI](https://fakestoreapi.com/).
 
-    - ![getAllCarts Postman response]("getAllCarts.png")
+    - ![Postman response](/assets/getAllCarts.png)
 
 
 - `GET /carts/{id}` - This endpoint returns a specific cart based on the cartID.
 
+    - ![Postman response](/assets/getSingleCart.png)
+
 - `GET /carts/user/{userId}` - This endpoint returns all the carts associated with a particular user, based on the userID.
+
+    - ![Postman response](/assets/getUserCart.png)
 
 - `GET/carts?startdate={startDate}&enddate={endDate}` - This endpoint returns all the carts that were created between the start date and the end date.
 
+    - ![Postman response](/assets/getInDateRange.png)
+
 - `POST /carts` - This endpoint allows you to create a new cart, and returns the newly created cart.
+
+    - ![Postman response](/assets/createCart.png)
 
 - `PUT /carts/{id}` - This endpoint allows you to update a specific cart based on the cartID, and returns the updated cart.
 
+    - ![Postman response](/assets/updateCart.png)
+
 
 - `DELETE /carts/{id}` - This endpoint deletes a specific cart based on the cartID, and returns the cart that was deleted.
+
+    - ![Postman response](/assets/deleteCart.png)
 
 ---
