@@ -1,7 +1,8 @@
 # Cart Services
 
-#### (using [FakeStoreAPI](https://fakestoreapi.com/) and [Spring Boot](https://spring.io/projects/spring-boot))
+#### (using [Fake Store API](https://fakestoreapi.com/) and [Spring Boot](https://spring.io/projects/spring-boot))
 
+Author : [`Prem Shah (MrPhenomenal3110)`](github.com/MrPhenomenal3110)
 
 ---
 
@@ -35,7 +36,7 @@ To run this project, you will need to have Java installed on your machine. You c
 
 You will also need to have IntelliJ Idea Ultimate installed on your device.
 
-To run this project locally, clone this repository, open it in IntelliJ Idea Ultimate, and run the `CartServicesApplication` class ( [path](/src/main/java/org/premshah/cartservice/CartServiceApplication.java) ).
+To run this project locally, fork this repository, open it in IntelliJ Idea Ultimate, and run the [`CartServicesApplication` class](/src/main/java/org/premshah/cartservice/CartServiceApplication.java).
 
 Now you can run the project using the run icon and navigate to the [localhost:8080](http://localhost:8080) (The default port is `8080`) to see the project running.
 
@@ -43,8 +44,8 @@ Now you can run the project using the run icon and navigate to the [localhost:80
 
 ## Usage
 
-This project is a simple cart service that uses the [FakeStoreAPI](https://fakestoreapi.com/) to get carts, update the carts and delete the carts. The creation, updation and deletion of the carts does not actually take place, but we get a response from the [FakeStoreAPI](https://fakestoreapi.com/) as if it did.
-For more information on the updation and deletion of the carts, please refer to the [FakeStoreAPI documentation](https://fakestoreapi.com/docs).
+This project is a simple cart service that uses the [Fake Store API](https://fakestoreapi.com/) to get carts, update the carts and delete the carts. The creation, updation and deletion of the carts does not actually take place, but we get a response from the [Fake Store API](https://fakestoreapi.com/) as if it did.
+For more information on the updation and deletion of the carts, please refer to the [Fake Store API documentation](https://fakestoreapi.com/docs).
 
 ---
 
@@ -52,7 +53,7 @@ For more information on the updation and deletion of the carts, please refer to 
 
 The following are the endpoints that are available in this project:
 
-- `GET /carts` - This endpoint returns all the carts from the [FakeStoreAPI](https://fakestoreapi.com/).
+- `GET /carts` - This endpoint returns all the carts from the [Fake Store API](https://fakestoreapi.com/).
 
     - ![Postman response](/assets/getAllCarts.png)
 
